@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang = "es">
+<html lang="es">
 <head>
-<meta charset = "UTF-8">
-<meta name = "viewport" content = "width=device-width, initial-scale = 1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>PRIMER EJERCICIO</title>
-<link rel = "stylesheet" href = "style.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -18,41 +18,37 @@
       <h2>Menú</h2>
       <ul>
         <li>Inicio</li>
-        <li>Proyectos</li>
+        <li>Tareas</li>
         <li>Configuración</li>
       </ul>
     </aside>
 
     <main>
-      <section class="task-list">
 
-        <article class="task">
-          <div class="task-info">
-            <h3>GESTIONAR BACKEND Y ARREGLAR ERRORES</h3>
-            <span class="category">Trabajo Primario</span>
-          </div>
-          <span class="priority high">Prioridad Alta</span>
-        </article>
+      <section class="task-creator">
+        <form id="task-form">
+          <input type="text" id="task-input" placeholder="Añadir tarea" required>
+          
+          <select id="priority-select">
+            <option value="Alta">Alta</option>
+            <option value="Media">Media</option>
+            <option value="Baja">Baja</option>
+          </select>
 
-        <article class="task">
-          <div class="task-info">
-            <h3>OPTIMIZAR CONSULTAS DE LA BASE DE DATOS</h3>
-            <span class="category">Trabajo Secundario</span>
-          </div>
-          <span class="priority medium">Prioridad Media</span>
-        </article>
+          <button type="submit">Añadir</button>
+        </form>
 
-        <article class="task">
-          <div class="task-info">
-            <h3>ACTUALIZAR REPOSITORIO EN GITHUB</h3>
-            <span class="category"> Trabajo Terciario</span>
-          </div>
-          <span class="priority low">Prioridad Baja</span>
-        </article>
-
+      
+        <input type="text" id="search-input" placeholder="Buscar tarea..." class="search-input">
       </section>
+
+     
+      <section class="task-list" id="task-list"></section>
+
     </main>
 
   </div>
 
+  <script src="app.js"></script>
 </body>
+</html>
