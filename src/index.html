@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PRIMER EJERCICIO</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind = {
+    config: {
+      darkMode: 'class'
+    }
+  }
+</script>
+
+</head>
+<body class="bg-gray-100 text-black dark:bg-black dark:text-white min-h-screen font-sans transition-colors">
+
+  <header class="w-full p-6 sticky top-0 z-50 shadow-lg bg-white dark:bg-black text-center transition-colors">
+    <button id="dark-toggle" class="ml-4 p-2 rounded bg-gray-800 text-white dark:bg-gray-200 dark:text-black hover:bg-gray-700 dark:hover:bg-gray-300 transition ">🌓 Modo Oscuro</button>
+    <h1 class="text-3xl font-extrabold uppercase tracking-widest bg-gradient-to-r from-pink-500 via-red-600 to-cyan-400 bg-clip-text text-transparent drop-shadow-lg hover:drop-shadow-xl transition">PRIMER EJERCICIO</h1>
+  </header>
+
+  <div class="flex gap-5 p-4 ">
+
+    <aside class="w-60 h-[290px] sticky top-24 p-6 bg-white dark:bg-[#230290] rounded-xl shadow-md dark:shadow-[0_0_10px_#ff00ff,0_0_15px_#00ffff] overflow-y-auto transition-colors">
+      <h2 class="text-xl font-bold text-center mb-6 drop-shadow-md">Menú</h2>
+      <ul class="space-y-4">
+        <li class="p-3 rounded-lg cursor-pointer bg-gray-200 dark:bg-white/5 shadow-inner hover:bg-gray-300 dark:hover:bg-white/20 hover:translate-x-1 transition relative before:absolute before:left-0 before:top-0 before:h-full before:w-1.5 before:rounded-l-lg before:bg-transparent hover:before:bg-cyan-400">Inicio</li>
+        <li class="p-3 rounded-lg cursor-pointer bg-gray-200 dark:bg-white/5 shadow-inner hover:bg-gray-300 dark:hover:bg-white/20 hover:translate-x-1 transition relative before:absolute before:left-0 before:top-0 before:h-full before:w-1.5 before:rounded-l-lg before:bg-transparent hover:before:bg-cyan-400">Tareas</li>
+        <li class="p-3 rounded-lg cursor-pointer bg-gray-200 dark:bg-white/5 shadow-inner hover:bg-gray-300 dark:hover:bg-white/20 hover:translate-x-1 transition relative before:absolute before:left-0 before:top-0 before:h-full before:w-1.5 before:rounded-l-lg before:bg-transparent hover:before:bg-cyan-400">Configuración</li>
+      </ul>
+    </aside>
+
+    <main class="flex-1 p-8">
+
+      <section class="flex flex-col gap-4 mb-6 w-full p-4 border-4 border-gray-300 dark:border-[#230290] bg-white dark:bg-transparent rounded-3xl transition-colors">
+        <form id="task-form" class="flex flex-wrap gap-3 justify-between">
+          <input type="text" id="task-input" placeholder="Añadir tarea" required
+          class="flex-1 p-3 rounded-lg bg-gray-100 dark:bg-black/30 backdrop-blur-sm border-none text-black dark:text-white shadow-inner dark:shadow-[0_0_10px_#0ff_inset,0_0_5px_#ff00ff_inset] focus:ring-2 focus:ring-cyan-400 focus:outline-none">
+          
+          <select id="priority-select"
+          class="p-3 rounded-lg bg-gray-100 dark:bg-black/30 backdrop-blur-sm border-none text-black dark:text-white shadow-inner dark:shadow-[0_0_10px_#0ff_inset,0_0_5px_#ff00ff_inset] focus:ring-2 focus:ring-cyan-400 focus:outline-none">
+            <option value="Alta">Prioridad Alta</option>
+            <option value="Media">Prioridad Media</option>
+            <option value="Baja">Prioridad Baja</option>
+          </select>
+
+          <button type="submit"
+          class="px-5 py-2 rounded-lg font-bold bg-gradient-to-br from-pink-500 to-cyan-400 shadow-md dark:shadow-[0_0_10px_#ff00ff,0_0_15px_#00ffff] hover:scale-105 hover:shadow-lg dark:hover:shadow-[0_0_20px_#ff00ff,0_0_30px_#00ffff] transition text-white">Añadir</button>
+        </form>
+
+        <input type="text" id="search-input" placeholder="Buscar tarea..." 
+        class="mt-4 w-full p-3 rounded-2xl border-2 border-pink-500 bg-gray-100 dark:bg-black/20 text-black dark:text-white shadow-md dark:shadow-[0_0_10px_#ff00ff,0_0_20px_#00ffff] placeholder-gray-500 dark:placeholder-gray-400 focus:border-cyan-400 focus:shadow-lg dark:focus:shadow-[0_0_15px_#ff00ff,0_0_25px_#00ffff] outline-none transition-colors">
+      
+      </section>
+
+      <section id="task-list" class="flex flex-col gap-4 cursor-pointer">
+   
+      </section>
+
+    </main>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
